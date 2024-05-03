@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.content-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: rgb(214, 245, 214);
+}
+
+h1 {
+  color: rgb(236, 50, 17);
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 300px;
+  background-color: rgb(214, 245, 214);
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+a {
+  width: 400px;
+  background-color: rgb(214, 245, 214);
+  text-align: center;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.playground {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 600px;
+  background-color: rgb(214, 245, 214);
+  padding: 20px;
+  margin: 0 20px;
+  min-height: 600px;
+}
+
+.aside-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(234, 224, 224, 0.756);
+  align-items: center;
+  width: 400px;
+  min-height: 600px;
+  padding: 20px;
+}
+
+.aside-right {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(234, 224, 224, 0.756);
+  align-items: center;
+  width: 400px;
+  min-height: 600px;
+  padding-top: 20px;
+}
+
+.top-scores,
+.last-results {
+  margin: 3px 3px 1px 18px;
+  height: 265px;
+  width: 350px;
+  overflow-y: scroll;
+}
+
+.top-scores li,
+.last-results li {
+  margin: 3px 10px 1px 30px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  overflow-wrap: break-word;
+}
+
+.top-scores :first-child {
+  background-color: gold;
+}
+.top-scores :nth-child(2) {
+  background-color: silver;
+}
+.top-scores :nth-child(3) {
+  background-color: #cd7f32;
+}
+.top-scores :nth-child(10) {
+  margin-bottom: 10px;
+}
+
+.counter-block {
+  width: 80px;
+  height: 80px;
+  border: 3px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+
+.counter {
+  font-weight: 700px;
+  font-size: 50px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(4, 90, 14);
+  width: 20%;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: contain;
+  background-size: 80%;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-image {
+  height: 80%;
+  height: 80%;
+  border-radius: 30%;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card.opened {
+  background-color: white;
+  border: 2px solid green;
+  cursor: default;
+  pointer-events: none;
+  transform: rotateY(180deg);
+}
+
+.card.opened .card-image {
+  opacity: 1;
+}
+
+.card:hover {
+  background-color: rgb(7, 229, 59);
+  transform: scale(1.08);
+  border: 2px solid black;
+}
+
+.restart {
+  border: transparent;
+  width: 200px;
+  height: 70px;
+  background-color: tomato;
+  transition: 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.restart:hover {
+  background-color: rgb(255, 99, 71, 0.8);
+  border: 1px solid tomato;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(214, 245, 214);
+  padding: 0px 20px;
+}
+
+.ico-gh {
+  width: 40px;
+  height: 40px;
+}
+
+.ico-rs {
+  width: 80px;
+  height: 50px;
+}
+
+p {
+  font-size: 20px;
+}
+
+@media (max-width: 1280px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .playground {
+    order: 1;
+    margin: 20px auto;
+  }
+
+  .aside-left {
+    width: 600px;
+    order: 2;
+    margin: 20px auto;
+  }
+  .aside-right {
+    width: 600px;
+    order: 3;
+    margin: 20px auto;
+  }
+}
